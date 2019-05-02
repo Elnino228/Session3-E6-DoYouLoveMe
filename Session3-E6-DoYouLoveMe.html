@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css-E5-Puzzle.css">
+</head>
+<body>
+<h1 style="position: absolute;left: 420px;top:30px"  >Do you love me?</h1>
+<button type="button" id="yes" style="position: absolute;left: 450px;top:100px"  onclick="func(this.id)">Yes</button>
+<button type="button" id="no" style="position: absolute;left: 500px;top:100px" onmouseover="func(this.id)">No</button>
+<script>
+    function func(ID) {
+        if (ID=='yes') {
+            alert('<3 <3 <3 :*');
+        } else {
+            let btnNo=document.getElementById(ID);
+            let winWidth=window.innerWidth;
+            let winHeight=window.innerHeight;
+            btnNo.style.position='relative';
+            btnNo.style.left=String(Math.random()*winWidth)+"px";
+            btnNo.style.top=String(Math.random()*winHeight)+'px';
+        }
+    }
+</script>
+</body>
+</html>
